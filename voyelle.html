@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="voyelle.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <ul>
+            <li><a>home</a></li>
+            <li><a href="permutation.html">Variables</a></li>
+            <li><a href="valider.html">Conditions</a></li>
+    
+            <li>
+              <a>Boucles</a>
+              <ul>
+                <li><a href="multiplication.html">boucle for</a></li>
+                <li><a href="devine le nombre.html">la boucle while</a></li>
+                <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>Les Chaines</a>
+              <ul>
+                <li><a href="recherche1.html">recherche et supperession</a></li>
+                <li><a href="voyelle.html">nombre d voyelles</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>table</a>
+              <ul>
+                <li><a href="tri.html">Tri</a></li>
+                <li><a href="recherche2.html">recherche</a></li>
+              </ul>
+            </li>
+    
+            <li><a href="calculatrice.html"£µ>Fonctions</a></li>
+        </ul>
+    </div>
+    <section>
+      <h1>Compter le nombre de voyelles dans une chaine</h1>
+      <div class="table1">
+        <h3>Enoncé</h3>
+        <p>
+          Ecrire un programme Javascript qui permet de calculer le nombre de
+          voyelles (a,e,i,o,u,y) dans une phrase saisie par l’utilisateur
+        </p>
+      </div>
+      <h3>Démo</h3>
+      <div class="demoo">
+        <label for="">Saisir une phrase</label>
+        <input id="t" />
+        <input
+          type="button"
+          id="btn"
+          value="Compter le nombre de voyelles"
+          onclick="count (t.value)"
+        />
+        <h6 id="TEXT">La phrase que vous avez saisi contient ?? voyelles</h6>
+      </div>
+      <h3>Code source</h3>
+      <div class="par">
+        <p>
+          count = function(a) {<br />
+
+          console.log(a); <br />
+          n = a.length;<br />
+          console.log(n); <br />
+          var c = 0;<br />
+          for (i = 0; i < n; i++) {<br />
+          if ((a[i] == "a") || (a[i] == "e") || (a[i] == "i") || (a[i] == "o")
+          || (a[i] == "u") || (a[i] == "y")) {<br />
+          console.log(a[i]); <br />
+          c += 1;<br />
+          }<br />
+          }<br />
+
+          document.getElementById("TEXT").innerText = c;<br />
+          }<br />
+        </p>
+      </div>
+    </section>
+
+    <script src="voyelle.js"></script>
+  </body>
+</html>

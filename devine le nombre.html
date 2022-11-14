@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="devine.css">
+    <title>devine le nombre</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><a>home</a></li>
+            <li><a href="permutation.html">Variables</a></li>
+            <li><a href="valider.html">Conditions</a></li>
+    
+            <li>
+              <a>Boucles</a>
+              <ul>
+                <li><a href="multiplication.html">boucle for</a></li>
+                <li><a href="devine le nombre.html">la boucle while</a></li>
+                <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>Les Chaines</a>
+              <ul>
+                <li><a href="recherche1.html">recherche et supperession</a></li>
+                <li><a href="voyelle.html">nombre d voyelles</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>table</a>
+              <ul>
+                <li><a href="tri.html">Tri</a></li>
+                <li><a href="recherche2.html">recherche</a></li>
+              </ul>
+            </li>
+    
+            <li><a href="calculatrice.html"£µ>Fonctions</a></li>
+        </ul>
+    </div>
+    <section>
+        <h1>Devine le nombre</h1>
+        <div class="enonce">
+          <h2>Enonce</h2>
+          <div id="enonce">
+            <p>
+                L’utilisateur doit deviner un nombre entre 1 et 50 que le programme a choisi aléatoirement en 10 tentatives.<br>Quand l’utilisateur entre une valeur, on lui affiche le nombre de tentatives restantes, ainsi qu’un message<br>indiquant si sa réponse est correcte ou pas.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="demo">
+          <h2>Demo</h2>
+          <div id="demo">
+            <p>Tries left : <span id="tentatives">10</span></p>
+            <p>Tentatives restantes: 7/10</p>
+            <input type="text"id="deviner-input">
+            <button onclick=onSubmit() id="btn">Envoyer</button>
+            <h3 id="message">Réesseyez encore !</h3>
+          </div>
+        </div>
+        <br />
+        <div class="codedesource">
+          <h2>Code de source</h2>
+          <div id="codedesource">
+            <p>var answer;<br>
+              var tries;<br>
+              var attempsOutput;<br>
+              var winMessage;<br>
+              var itIsSmall;<br>
+              var itIsBigger;<br>
+              // Seize <br>
+              var lostMessage = "Game over";<br>
+              var tentatives = document.getElementById("tentatives");<br>
+              var message = document.getElementById("message")<br>
+              
+              answer = Math.floor(Math.random() * 100+1);<br>
+              tries =10;<br>
+              function writeattempts () {<br>
+                  tentatives.innerHTML = tries;<br>
+              }<br>
+              
+              
+              function onSubmit (){<br>
+                  --tries;<br>
+                  attempsOutput = 10 - tries;<br>
+              
+                  if(tries > 0){<br>
+                      var userInput = document.getElementById("deviner-input").value;<br>
+              
+                      if(isNaN(userInput) || userInput== undefined){<br>
+                          alert("Please Enter a Number!")<br>
+                      } else {<br>
+                          isCorrect(userInput)<br>
+                      }
+                      userInput.value = ""<br>
+                  } else {
+                      message.innerHTML = lostMessage<br>
+                      tentatives.innerHTML = 0;<br>
+                  }<br>
+              }<br>
+              
+              function isCorrect(userInput) {<br>
+              
+                   itIsSmall = "My number is lees than" + " " + userInput + " , try again!"<br>
+                   itIsBigger = "My number is greater than" + " " + userInput + " , try again!"<br>
+                      if (userInput == answer){<br>
+                          if(tries >= 8){<br>
+                              winMessage = 'Bravo, you are a genius !!!'<br>
+                          } else {<br>
+                              winMessage = "Congratulations, you won after " + attempsOutput + " " + "tries" ;<br>
+                          }
+                          message.innerHTML = winMessage<br>
+              
+                      } else if (userInput > answer){<br>
+                          message.innerHTML = itIsSmall<br>
+                          writeattempts() <br>
+              
+                      } else if (userInput < answer){<br>
+                          message.innerHTML = itIsBigger<br>
+                          writeattempts() <br>
+              
+                      } <br>
+              
+              }</p>
+          </div>
+        </div>
+      </section>
+    <script src="devine.js"></script>
+</body>
+</html>

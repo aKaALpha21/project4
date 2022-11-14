@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculatrice.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a>home</a></li>
+        <li><a href="permutation.html">Variables</a></li>
+        <li><a href="valider.html">Conditions</a></li>
+
+        <li>
+          <a>Boucles</a>
+          <ul>
+            <li><a href="multiplication.html">boucle for</a></li>
+            <li><a href="devine le nombre.html">la boucle while</a></li>
+            <li>
+              <a href="losange en etoiles.html">les boucles imbriquees</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a>Les Chaines</a>
+          <ul>
+            <li><a href="recherche1.html">recherche et supperession</a></li>
+            <li><a href="voyelle.html">nombre d voyelles</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>table</a>
+          <ul>
+            <li><a href="tri.html">Tri</a></li>
+            <li><a href="recherche2.html">recherche</a></li>
+          </ul>
+        </li>
+
+        <li><a href="calculatrice.html">Fonctions</a></li>
+      </ul>
+    </div>
+    <section>
+      <h1>Table de calculatrice</h1>
+      <div class="table1">
+        <h3>Calculatrice</h3>
+        <p>
+          Créez 4 fonctions Javascript (Somme, Soustraction, Division,
+          Multiplication). L’utilisateur saisie deux nombres dans deux inputs,
+          choisi ensuite une opération arithmétique. Le résultat est donné par
+          l’une des 4 fonctions Javascript.
+        </p>
+      </div>
+      <h3>Démo</h3>
+      <div class="demoo">
+        <form name="calc">
+          <input type="text" name="nbr1" id="table1" /><br />
+          <input type="text" name="nbr2" id="table1" /><br />
+          <input type="button" value="+" onClick="operation('add')" />
+          <input type="button" value="-" onClick="operation('sou')" />
+          <input type="button" value="x" onClick="operation('mul')" />
+          <input type="button" value="/" onClick="operation('div')" />
+          <br />
+          <input type="text" name="res" id="table2" />
+        </form>
+      </div>
+      <h3>Code source</h3>
+      <div class="par">
+        <p>
+          function operation(op){<br />
+          nombre1=document.calc.nbr1.value;<br />
+          nombre2=document.calc.nbr2.value;<br />
+          switch(op){<br />
+          case "add": resultat=parseFloat(nombre1)+parseFloat(nombre2);
+          break;<br />
+          case "sou": resultat=nombre1-nombre2; break;<br />
+          case "mul": resultat=nombre1*nombre2; break;<br />
+          case "div": {<br />
+          if(nombre2!=0)<br />
+          resultat=nombre1/nombre2;<br />
+          else<br />
+          resultat="Erreur!";<br />
+          }<br />
+          }<br />
+          document.calc.res.value=resultat;<br />
+          }<br />
+        </p>
+      </div>
+    </section>
+    <script src="calculatrice.js"></script>
+  </body>
+</html>

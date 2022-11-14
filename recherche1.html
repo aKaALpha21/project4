@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recherche1.css" />
+    <title>recherche et supperession</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a>home</a></li>
+        <li><a href="permutation.html">Variables</a></li>
+        <li><a href="valider.html">Conditions</a></li>
+
+        <li>
+          <a>Boucles</a>
+          <ul>
+            <li><a href="multiplication.html">boucle for</a></li>
+            <li><a href="devine le nombre.html">la boucle while</a></li>
+            <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>Les Chaines</a>
+          <ul>
+            <li><a href="recherche1.html">recherche et supperession</a></li>
+            <li><a href="voyelle.html">nombre d voyelles</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>table</a>
+          <ul>
+            <li><a href="tri.html">Tri</a></li>
+            <li><a href="recherche2.html">recherche</a></li>
+          </ul>
+        </li>
+
+        <li><a href="calculatrice.html">Fonctions</a></li>
+      </ul>
+    </div>
+    <section>
+      <h1>Recherche et suppression dans une chaine</h1>
+      <div class="enonce">
+        <h2>Enonce</h2>
+        <div id="enonce">
+          <p>
+            Ecrire un programme Javascript qui demande à l’utilisateur de saisir
+            une phrase dans une zone<br />de texte et un mot dans une autre zone
+            de texte. Le clique sur le bouton rechercher affiche un<br />message
+            si le mot existe dans la phrase ou non. Le clique sur le bouton
+            supprimer permet<br />d’effacer toutes les occurrence du mot dans la
+            phrase ( si le mot existe bien sûr).
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="demo">
+        <h2>Demo</h2>
+        <div>
+          <div>
+            <p>Saisir une phrase</p>
+            <input type="text"id="phrase1"/>
+            <button id="button" onclick="saiserPhrase()">Recherche</button>
+          </div>
+          <div>
+            <p>Saisir le mot à rechercher ou à supprimer</p>
+            <input type="text" name="" id="mots" />
+            <button id="clear" onclick="clearOcurences()">Suprrimer les occurences</button>
+          </div>
+          <p id="resultat">
+            /* Le message de recherche s’affiche ici Ou la nouvelle phrase après
+            la suppression des occurences */
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="codedesource">
+        <h2>Code de source</h2>
+        <div id="codedesource">
+          <p>function saiserPhrase(){
+            document.getElementById('button').onclick=function(){<BR>
+              var str = document.getElementById('phrase1').value;
+              var index = str.indexOf(document.getElementById('mots').value);<BR>
+              if(index !== -1){
+                document.getElementById('resultat').innerHTML="Le mot existe!"<BR>
+              } else{
+                document.getElementById('resultat').innerHTML="Le mot n'existe pas!";<BR>
+              }<BR>
+            }
+            document.getElementById('reset').onclick=function(){<BR>
+              location.reload();<BR>
+            }<BR>
+          }<BR>
+          function clearOcurences(){<BR>
+            document.getElementById('clear').onclick=function(){<BR>
+            var str = document.getElementById('phrase1').value;<BR>
+            var index = document.getElementById('mots').value;<BR>
+            var ret = str.replace(index, '');<BR>
+            document.getElementById('resultat').innerHTML=ret;<BR>
+            }<BR>
+            document.getElementById('reset').onclick=function(){<BR>
+              location.reload();
+            }
+          }</p>
+        </div>
+      </div>
+    </section>
+    <script src="recherche1.js"></script>
+  </body>
+</html>

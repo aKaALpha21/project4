@@ -1,0 +1,146 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.table1 p{
+    padding: 9px 0 0 15PX;
+    color: rgb(105, 103, 103);
+}
+p{
+    width: 900px;
+
+    box-sizing: border-box;
+    background-color: rgb(229, 225, 225);
+    
+    height: 5rem;
+    
+}
+h3{ 
+    margin-top: 45px;
+    font-size: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(180, 174, 174);
+    height: 35px;
+    width: 150px;
+}
+.headingsection{
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(180, 174, 174);
+    height: 35px;
+    width: 150px;
+}
+.paragraphsection{
+    margin-top: -19px;
+    width: 900px;
+    height: 30rem;
+    background-color:  rgb(229, 225, 225);
+    padding-left: -20px;
+    
+}
+
+  .par p{
+        padding: 25px 0 0 15PX;
+        font-family: 'Poppins', sans-serif;
+        
+        width: 900px;
+        box-sizing: border-box;
+        background-color: rgb(229, 225, 225);
+        height: 53rem;
+        
+  } .wrapper ul{
+    list-style: none;
+    margin-top: 2%;
+    display: flex; 
+    flex-direction: row;
+    
+    
+    }
+    .wrapper ul li {
+    background: #262626;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 10em;
+    height: 3em;
+    color: #fff;
+    position: relative; 
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+    .wrapper ul li:hover{
+    background: gray; 
+    }
+    .wrapper ul ul{
+    display: none;
+    
+    }
+    .wrapper ul li:hover > ul{
+    display: block;
+    }
+    .wrapper ul ul li{
+    border: 1px solid #fff;
+    text-align: center;
+    margin-left: -2.6em;
+    }
+    a{
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+    }
+     @media only screen and (max-width: 700px) {
+        .wrapper{
+            margin-left: -13%;
+            width: 20%;
+
+        }
+        .wrapper ul li {
+            background: #262626;
+            border: 1px solid #fff;
+            text-align: center;
+            width: 8em;
+            height: 3em;
+            color: #fff;
+            position: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: xx-small;
+        }
+        .paragraphsection{
+            margin-top: -19px;
+            width: 270px;
+            height: 30rem;
+            background-color:  rgb(229, 225, 225);
+            padding-left: -20px;
+            
+        }
+        .par p{
+            font-family: 'Poppins', sans-serif;
+            
+            width: 270px;
+            
+            height: auto;
+        }
+            P{
+                width: 270px;
+            }
+            body{
+                font-family: 'Poppins', sans-serif;
+                margin-left: 10px;
+                
+            }
+            .table1 p{
+                margin-bottom: 20%;
+                padding: auto;
+                height: auto;
+            }
+            .wrapper ul ul li{
+                border: 1px solid #fff;
+                text-align: center;
+                margin-left: -4.6em;
+                }
+    }
+      

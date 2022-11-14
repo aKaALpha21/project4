@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="losange.css" />
+    <title>losange en etoiles</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a>home</a></li>
+        <li><a href="permutation.html">Variables</a></li>
+        <li><a href="valider.html">Conditions</a></li>
+
+        <li>
+          <a>Boucles</a>
+          <ul>
+            <li><a href="multiplication.html">boucle for</a></li>
+            <li><a href="devine le nombre.html">la boucle while</a></li>
+            <li>
+              <a href="losange en etoiles.html">les boucles imbriquees</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a>Les Chaines</a>
+          <ul>
+            <li><a href="recherche1.html">recherche et supperession</a></li>
+            <li><a href="voyelle.html">nombre d voyelles</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>table</a>
+          <ul>
+            <li><a href="tri.html">Tri</a></li>
+            <li><a href="recherche2.html">recherche</a></li>
+          </ul>
+        </li>
+
+        <li><a href="calculatrice.html">Fonctions</a></li>
+      </ul>
+    </div>
+    <section>
+      <h1>losange en etoiles</h1>
+      <div class="enonce">
+        <h2>Enonce</h2>
+        <div id="enonce">
+          <p>
+            Ce programme a pour objectif de dessiner un losange en étoiles dont
+            la longueur des diagonales est un<br />nombre impair saisi par
+            l’utilsateur. Dans le cas où l’utilisateur entre un nombre pair, il
+            faut afficher une erreur.
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="demo">
+        <h2>Demo</h2>
+        <div id="demo">
+          <p>Saisir la longueur des diagonales</p>
+          <input type="text" id="etoile" />
+          <button id="btn">Dessiner</button>
+          <p id="para"></p>
+        </div>
+      </div>
+      <br />
+      <div class="codedesource">
+        <h2>Code de source</h2>
+        <div id="codedesource">
+          <p>
+            let btnCheck = document.getElementById("btn");<br> let result
+            =document.getElementById("para"); btnCheck.addEventListener('click'<br>
+            , function() { var etoile = document.getElementById("etoile").value;<br>
+            var para = document.getElementById("para"); var i, k; for (i = 1; i<br>
+            <= etoile; i++) { for (k = 1; k <= i; k++) { para.innerHTML += "*";<br>
+            } para.innerHTML += "<br />"; } });
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="losange.js"></script>
+  </body>
+</html>

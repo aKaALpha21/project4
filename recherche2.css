@@ -1,0 +1,161 @@
+*{
+    margin: 0em;
+    padding: 0em;
+}
+h1{
+    font-size: xx-large;
+    margin-top: 2%;
+    margin-left: 5%;
+
+}
+h2{
+    font-size:large ;
+    background-color: #C7C7C7;
+    width: 7%;
+}
+.wrapper{
+    width: 90%;
+    margin-left: 5%;
+    display: flex; 
+    flex-direction: row; 
+}
+.wrapper ul{
+    list-style: none;
+    margin-top: 2%;
+    display: flex; 
+    flex-direction: row;
+    
+    
+    }
+
+    p{
+        background-color: #F1F1F1;
+    }
+    .wrapper ul li {
+    background: #262626;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 10em;
+    height: 3em;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+    .wrapper ul li:hover{
+    background: gray; 
+    }
+    .wrapper ul ul{
+    display: none;
+    }
+    .wrapper ul li:hover > ul{
+    display: block;
+    }
+    .wrapper ul ul li{
+    border: 1px solid #fff;
+    text-align: center;
+    }
+    a{
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+    }
+    #enonce{
+        background-color: #F1F1F1;
+        width: 90%;
+    }
+    .enonce{
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    .demo{
+        background-color: #F1F1F1;
+        
+    }
+    .inp1{
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 30%;
+        
+        
+    }
+    .inp2{
+        display: flex;
+        justify-content: center;
+    }
+    .inp3{
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    .inp2 input{
+        height: 2em;
+        margin-top: 1em;
+        width: 5%;
+    }
+    #pinp{
+        margin-top: 1em;
+    }
+    #alone{
+        background-color: #F1F1F1;
+        height: 2em;
+        margin-left: 50%;
+        margin-top: 2em;
+    }
+    .demo button{
+        color: #fff;
+        background-color: black;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 700px) {
+        .wrapper{
+            margin-left: 0%;
+            width: 50%;
+
+        }
+        .wrapper ul li {
+            background: #262626;
+            /* border: 1px solid #fff; */
+            /* text-align: center; */
+            width: 6.2em;
+            height: 3em;
+            color: #fff;
+            /* position: relative; */
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: xx-small;
+        }
+        #alone{
+            background-color: #F1F1F1;
+            height: 2em;
+            margin-left: 10%;
+            margin-top: 2em;
+        }
+        .enonce{
+            background-color: #F1F1F1;
+            width: 90%;
+        }
+        h2{
+            font-size:large ;
+            background-color: #C7C7C7;
+            width: 17%;
+        }
+        .inp1{
+             width: 20%;
+            margin-left: 20%;
+            font-size: x-small;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        .demo{
+            width: 90%;
+     
+    }
+    h1{
+        width: 20%;
+        
+    }
+   
+}

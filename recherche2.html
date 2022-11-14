@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recherche2.css">
+    <title>Rechrche dans un tableau</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+          <li><a>home</a></li>
+          <li><a href="permutation.html">Variables</a></li>
+          <li><a href="valider.html">Conditions</a></li>
+  
+          <li>
+            <a>Boucles</a>
+            <ul>
+              <li><a href="multiplication.html">boucle for</a></li>
+              <li><a href="devine le nombre.html">la boucle while</a></li>
+              <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a>Les Chaines</a>
+            <ul>
+              <li><a href="recherche1.html">recherche et supperession</a></li>
+              <li><a href="voyelle.html">nombre d voyelles</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a>table</a>
+            <ul>
+              <li><a href="tri.html">Tri</a></li>
+              <li><a href="recherche2.html">recherche</a></li>
+            </ul>
+          </li>
+  
+          <li><a href="calculatrice.html">Fonctions</a></li>
+        </ul>
+      </div>
+      <section>
+        <h1>Rechrche dans un tableau</h1>
+        <div class="enonce">
+          <h2>Enonce</h2>
+          <div id="enonce">
+            <p>
+                Ecrire un programme Javascript qui permet de rechercher une valeur dans un tableau d’entier.<br>
+                L’utilisateur doit suivre les étapes suivantes :<br>
+                1.	Saisir la taille du tableau,<br>
+                2.	Remplir le tableau par des entiersbr<br>
+                3.	Introduire la valeur à rechercher<br>
+                4.	Cliquer sur le boutons « Rechercher »<br>
+                Le programme affiche ensuite un message si la valeur à rechercher existe ou non dans le tableau.<br>             
+            </p>
+          </div>
+        </div>
+        <section>
+            <h2>Démo</h2>
+        <div class="demo">
+            <div class="inp1">
+              <div class="affect">
+                  <p>Donner la taille du tableau :</p><br>
+                  <input type="number" id="entrer"><br>
+                  <button id="mar" type="button" onclick="valider()">Valider</button><br>
+              </div>
+              <div class="affect">
+                <p>Veuiller remplir le tableau :</p><br>
+                <output id="outp"></output><br>
+              </div>
+              <div class="affect">
+                  <p >Donner la valeur à rechercher dans le tableau :</p><br>
+                  <input type="number" id="valeur"><br>
+                  <button id="marr" type="button" onclick="chercher()">Rechercher</button><br>
+              </div>
+              <div class="output" id="message">
+                <output id="existe"></output>
+              </div>
+            </div>
+        </div>
+        <div class="codedesource">
+            <h2>Code de source</h2>
+            <div id="codedesource">
+              <p>function valider() {<br>
+                let x = "";<br>
+                let out = document.getElementById('entrer').value ;<br>
+                    if(out <= 10){<br>
+                        for (let i = 0; i<"out; i++){<br>
+                        x = x +"<"inputid=en" + i +">"<br>
+                        document.getElementById('outp').innerHTML = x<br>
+                        }<br>
+                    }<br>
+                    else{<br>
+                        document.getElementById('outp').innerHTML = "Entrer un valeur entre 1 et 10"<br>
+                    }<br>
+                }<br>
+                function chercher() {<br>
+                let valeur = document.getElementById('valeur').value;<br>
+                let x = "";<br>
+                    for(let j = 0 ; j <= 10 ; j++){
+                        x = x+" "+document.getElementById("en"+j).value<br>
+                        if(x.includes(valeur)){<br>
+                        document.getElementById('existe').innerHTML = "La valeur que vous recherchez existe."<br>
+                        }<br>
+                        else {<br>
+                        document.getElementById('existe').innerHTML = "La valeur que vous recherchez n'existe pas."<br>
+                        }<br>
+                    }<br>
+                }</p>
+            </div>
+          </div> 
+        </section>
+      <script src="recherche2.js"></script>
+</body>
+</html>

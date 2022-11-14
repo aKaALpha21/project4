@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="permutation.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a>home</a></li>
+        <li><a href="permutation.html">Variables</a></li>
+        <li><a href="valider.html">Conditions</a></li>
+
+        <li>
+          <a>Boucles</a>
+          <ul>
+            <li><a href="multiplication.html">boucle for</a></li>
+            <li><a href="devine le nombre.html">la boucle while</a></li>
+            <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>Les Chaines</a>
+          <ul>
+            <li><a href="recherche1.html">recherche et supperession</a></li>
+            <li><a href="voyelle.html">nombre d voyelles</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>table</a>
+          <ul>
+            <li><a href="tri.html">Tri</a></li>
+            <li><a href="recherche2.html">recherche</a></li>
+          </ul>
+        </li>
+
+        <li><a href="calculatrice.html">Fonctions</a></li>
+      </ul>
+    </div>
+    <section>
+      <h1>Permutation de deux nombres</h1>
+      <div class="table1">
+        <h3>Enoncé</h3>
+        <p>Ecrire un script qui permute deux nombres saisis dans deux inputs</p>
+      </div>
+      <div class="table2">
+        <h3>Démo</h3>
+        <div class="num"></div>
+        <div class="demoo">
+          <div class="demo">
+            <div class="nombre">
+              <h5>Nombre 1:</h5>
+              <div class="nombre1"></div>
+              <h5>Nombre 2:</h5>
+            </div>
+          </div>
+          <input type="text" id="val1" />
+          <button id="button">⇄</button>
+          <input type="text" id="val2" />
+        </div>
+        <h3>Code source</h3>
+        <div class="par">
+          <p>
+            var monBouton = document.getElementById('button');<br />
+            monBouton.addEventListener('click', function(){<br />
+
+            var x, input1, input2;<br />
+            input1 = document.getElementById("val1");<br />
+            input2 = document.getElementById("val2")<br />
+            x = input1.value;<br />
+            input1.value = input2.value;<br />
+            input2.value = x;<br />
+            })
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="permutation.js"></script>
+  </body>
+</html>

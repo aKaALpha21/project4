@@ -1,0 +1,126 @@
+*{
+    margin: 0em;
+    padding: 0em;
+}
+h1{
+    font-size: xx-large;
+    margin-top: 2%;
+    margin-left: 5%;
+
+}
+h2{
+    font-size:large ;
+    background-color: #C7C7C7;
+    width: 5%;
+}
+#demo,#enonce,#codedesource{
+    background-color: #F1F1F1;
+    width: 90%;
+}
+#demo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.demo button{
+    width: 10%;
+    margin-left: 50%;
+    margin-bottom: 10%;
+}
+.demo p{
+    margin-left: 16%;
+}
+.demo input{
+    margin-left: 20%;
+}
+.enonce{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.demo{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.codedesource{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+input{
+    width: 15%;
+    height: 15%;
+}
+.wrapper{
+    width: 90%;
+    margin-left: 5%;
+     display: flex; 
+    flex-direction: row; 
+}
+    .wrapper ul{
+    list-style: none;
+    margin-top: 2%;
+    display: flex; 
+    flex-direction: row;
+    
+    
+    }
+    .wrapper ul li {
+    background: #262626;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 10em;
+    height: 3em;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+    .wrapper ul li:hover{
+    background: gray; 
+    }
+    .wrapper ul ul{
+    display: none;
+    }
+    .wrapper ul li:hover > ul{
+    display: block;
+    }
+    .wrapper ul ul li{
+    border: 1px solid #fff;
+    text-align: center;
+    }
+    a{
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+    }
+    @media only screen and (max-width: 700px) {
+        .wrapper{
+            display: block;
+            width: 20%;
+
+        }
+        .wrapper ul li {
+            background: #262626;
+            border: 1px solid #fff;
+            text-align: center;
+            width:8em;
+            height: 3em;
+            color: #fff;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: x-small;
+        }
+        h2{
+            font-size:large ;
+            background-color: #C7C7C7;
+            width: 15%;
+        }
+        .demo button{
+            width: 17%;
+            margin-left: 50%;
+            margin-bottom: 10%;
+        }
+
+     
+    }
+      

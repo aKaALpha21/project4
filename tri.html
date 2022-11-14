@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tri.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+          <li><a>home</a></li>
+          <li><a href="permutation.html">Variables</a></li>
+          <li><a href="valider.html">Conditions</a></li>
+  
+          <li>
+            <a>Boucles</a>
+            <ul>
+              <li><a href="multiplication.html">boucle for</a></li>
+              <li><a href="devine le nombre.html">la boucle while</a></li>
+              <li>
+                <a href="losange en etoiles.html">les boucles imbriquees</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li>
+            <a>Les Chaines</a>
+            <ul>
+              <li><a href="recherche1.html">recherche et supperession</a></li>
+              <li><a href="voyelle.html">nombre d voyelles</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a>table</a>
+            <ul>
+              <li><a href="tri.html">Tri</a></li>
+              <li><a href="recherche2.html">recherche</a></li>
+            </ul>
+          </li>
+  
+          <li><a href="calculatrice.html">Fonctions</a></li>
+        </ul>
+    </div>
+    <section>
+    <h1>Tri d’un tableau</h1>
+        <div class="table1">
+        
+        <div class="headingsection">Enoncé</div>
+        <p>Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel algorithme de tri mais surtout pas la fonction Sort de l’objet Array).
+            L’utilisateur commence tout d’abord par saisir la taille du tableau, ensuite il remplit le tableau pour cliquer à la fin sur un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+            </p>
+        </div>
+        
+            <div class="headingsection">Démo</div>
+            <div class="paragraphsection">
+                <div class="d-flex">
+                <div>
+                    <p>Donner la taille du tableau</p>
+                </div>
+                <div>
+                    <input  id="tablesize" type="text" >
+                </div>
+                <div class="center-item ">
+                    <button onclick="makethetable()" >Valider</button>
+                </div>
+                </div>
+                <div class="d-flex">
+                    <div  class="center-item ">
+                        <p >Veuiller remplir le tableau</p>
+                    </div>
+                    <div id="createherethefirsttable" class="d-flex flex-wrap darkbgcolor" >
+                    </div>
+                    <div class="center-item ">
+                        <button onclick="triletableau()" >Trier</button>
+                    </div>
+                    </div>
+                    <div class="darkbg" >
+                        <p> Le tableau reafficher ici après son tri </p>
+                    <div class="d-flex flex-wrap darkbgcolor " id="sectable" >
+                                </div>
+                </div>
+            </div>
+        <h3>Code source</h3> 
+        <div class="par">
+                <p>function makethetable(){<br>
+                createherethefirsttable.innerHTML = "";<br>
+                for( i=1 ; i < Number(tablesize.value) + 1 ; i++){<br>
+                createherethefirsttable.innerHTML<br> += '<'input type="text" class="inputtable" id="inputtable'+i+ '">';<br>
+                    }<br>
+                }<br>
+                const tablearray1 = [];<br>
+                function triletableau(){<br>
+                tablearray1.length = 0 ;<br>
+                    sectable.innerHTML = "";<br>
+                var i;<br>
+                    for( i=1 ; i < Number(tablesize.value) + 1 ; i++){ <br>
+                let  theid = "inputtable"+ i ;<br>
+                console.log<br>(document.getElementById<br>(theid).value);<br>
+                    tablearray1.push<br>(Number(document.getElementById<br>(theid).value));<br>
+                }<br>
+                function tri(table) {<br>
+                for(var i = 0;i<"table.length;i++){ <br>
+                    for(var j= i+1;j<"table.length;j++){<br>
+                        if(table[i]>table[j]){<br>
+                            var swap = table[i];<br>
+                            table[i] = table[j];<br>
+                            table[j] = swap;<br>
+                        }<br>
+                    }<br>
+                }<br>
+                }<br>
+                tri(tablearray1);<br>
+                for( i=0 ; i < Number(tablesize.value) ; i++){<br>
+                sectable.innerHTML<br> += '<'input type="text" class="inputtable" id="inputtableTwo'+i+ '">';<br>
+                }<br>
+                for( i=0 ; i < Number(tablesize.value) ; i++){<br>
+                let  theid = "inputtableTwo"+ i ;<br>
+                document.getElementById(theid)<br>.value = tablearray1[i];<br>
+                }<br>
+                }<br>
+                </p>
+            </div>
+
+            <script src="tri.js"></script>
+    </section>
+</body>
+</html>

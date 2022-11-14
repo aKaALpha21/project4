@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="multiplication.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><a>home</a></li>
+            <li><a href="permutation.html">Variables</a></li>
+            <li><a href="valider.html">Conditions</a></li>
+    
+            <li>
+              <a>Boucles</a>
+              <ul>
+                <li><a href="multiplication.html">boucle for</a></li>
+                <li><a href="devine le nombre.html">la boucle while</a></li>
+                <li><a href="losange en etoiles.html">les boucles imbriquees</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>Les Chaines</a>
+              <ul>
+                <li><a href="recherche1.html">recherche et supperession</a></li>
+                <li><a href="voyelle.html">nombre d voyelles</a></li>
+              </ul>
+            </li>
+    
+            <li>
+              <a>table</a>
+              <ul>
+                <li><a href="tri.html">Tri</a></li>
+                <li><a href="recherche2.html">recherche</a></li>
+              </ul>
+            </li>
+    
+            <li><a href="calculatrice.html">Fonctions</a></li>
+        </ul>
+    </div>
+<SECtion>
+        <h1>Table de multiplication</h1>
+        <div class="table1">
+        <h3>Enoncé</h3>
+        <p>Ecrire un script qui permute deux nombres saisis dans deux inputs</p>
+        </div>
+        <div >
+            <h3>Démo</h3>
+    <div class="demoo">
+       
+        <div class="nombre">
+ 
+            <input type="numbre" name="" id="table">
+            <button id="arrow" onclick="generate()"> <span> Générer la table</span></button> 
+            <div id= "result"></div>
+        </div>
+    </div>
+        <h3>Code source</h3> 
+      <div class="par">
+            <p>function generate() {<br>
+            var result =document.getElementById('result');<br>
+            var table =document.getElementById('table').value;<br>
+            result.innerHTML='';<br>
+            for (let i = 1; i < 11; i++){<br>
+            result.innerHTML+= table + "x" + i + "=" + table*i + "<br>";<br>
+            } }
+            </p>
+      </div>
+</SECtion>
+<script src="multiplication.js"></script>
+</body>
+</html>

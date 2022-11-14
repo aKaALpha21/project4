@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="valider.css" />
+    <title>valider une date</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a>home</a></li>
+        <li><a href="permutation.html">Variables</a></li>
+        <li><a href="valider.html">Conditions</a></li>
+
+        <li>
+          <a>Boucles</a>
+          <ul>
+            <li><a href="multiplication.html">boucle for</a></li>
+            <li><a href="devine le nombre.html">la boucle while</a></li>
+            <li>
+              <a href="losange en etoiles.html">les boucles imbriquees</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a>Les Chaines</a>
+          <ul>
+            <li><a href="recherche1.html">recherche et supperession</a></li>
+            <li><a href="voyelle.html">nombre d voyelles</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a>table</a>
+          <ul>
+            <li><a href="tri.html">Tri</a></li>
+            <li><a href="recherche2.html">recherche</a></li>
+          </ul>
+        </li>
+
+        <li><a href="calculatrice.html">Fonctions</a></li>
+      </ul>
+    </div>
+    <section>
+      <h1>Valider une date</h1>
+      <div class="enonce">
+        <h2>Enonce</h2>
+        <div id="enonce">
+          <p>
+            Ecrire un script qui permet de saisir les trois champs d’une date
+            (jour, mois et année) et<br />d’indiquer si la date est correcte ou
+            non
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="demo">
+        <h2>Demo</h2>
+        <div id="demo">
+          <p>Jour:</p>
+          <input type="text" placeholder="DD" id="date" />
+          <p>Mois:</p>
+          <input type="text" placeholder="MM" id="month" />
+          <p>Année:</p>
+          <input type="text" placeholder="YYYY" id="year" />
+          <button id="check">valider</button>
+          <h2 id="res">result</h2>
+        </div>
+      </div>
+      <br />
+      <div class="codedesource">
+        <h2>Code de source</h2>
+        <div id="codedesource">
+          <p>
+            let btnCheck = document.getElementById("check"); let result<br>
+            =document.getElementById("res"); btnCheck.addEventListener('click' ,<br>
+            function() { var j, m, a; var cas1, cas2, cas3, cas4; j =
+            document.getElementById("date").value; m =<br>
+            document.getElementById("month").value; a =<br>
+            document.getElementById("year").value; cas1 = a>0 && (m==1 || m==3<br>
+            || m==5 || m==7 || m==8 || m==10 || m==12) && (j>=1 && j<=31); cas2<br>
+            = a>0 && (m==4 || m==6 || m==9 || m==11) && (j>=1 && j<=30); cas3 =
+            a>0 && m==2 && a%4==0 && j>=1 && j<=29; cas4 = a>0 && m==2 && a%4!=0<br>
+            && j>=1 && j<=28; if(cas1 || cas2 || cas3 || cas4) {<br>
+            document.getElementById("res").innerHTML="Date is valid"; } else {<br>
+            document.getElementById("res").innerHTML="Date is not valid"; } });<br>
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="valider.js"></script>
+  </body>
+</html>
